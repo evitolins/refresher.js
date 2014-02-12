@@ -4,7 +4,7 @@
 
 Simply repeat a definable callback using requestAnimationFrame().
 
-This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  There are plenty of options to allow for more advanced control, if needed.  I imagine it has potential for gaming clocks, data polling, and any other repeatitive task your JS brains can come up with.  Have fun!
+This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  For those who might need it, there are plenty of helpful methods provided to allow for more advanced control.  I imagine it has potential for gaming clocks, data polling, and any other repeatitive task your JS brains can come up with.  Have fun!
 
 ## Installation
 **Basic**
@@ -22,17 +22,27 @@ This simple object has proven useful several times in the past, so I thought I'd
 The quickest way to use Refresher is to define it's callback and settings when instantiating the object
 
     // Refresh and run callback every 5 seconds, starting in 5 seconds.
-    var refreshA = new Refresher( function () {console.log("a");}, 5);
+    var refreshA = new Refresher( function () {console.log("You repeat me!");}, 5);
 
 You can also add or edit your options at any time after instantiation
 
     // Refresh and run callback every 20 seconds, starting immediately.
     var refreshB = new Refresher();
-    refreshB.setCallback(function () {console.log("b");});
+    refreshB.setCallback(function () {console.log("Has it been 20 seconds already?");});
     refreshB.setFreq(20);
 
 
-## Options
+## Advanced
+
+### Instantly Apply Callback
+In some cases you might need to instantly run your callback during instantiation. If so, just set the 3rd arguement as `true`.
+
+    // Run callback immediately, and then repeat once per minute.
+    var refreshA = new Refresher( function () {console.log("See you again in 60 seconds.");}, 60 , true);
+
+
+
+## Methods
 **getTotal**
 : Returns total repeats since last reset
 
