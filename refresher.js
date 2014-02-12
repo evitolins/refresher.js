@@ -1,6 +1,6 @@
 /*
 
-   # RGBrefresher
+   # Refresher
   
     A simple callback w/ refresh using requestAnimationFrame().
 
@@ -39,7 +39,7 @@ browser: true, devel: true, plusplus: true, unparam: true, todo: true, vars: tru
  * @param {Number}    seconds   Time between each refresh
  * @param {Boolean}   immediate Forces to execute refresh immediately upon init.
  */
-var RGBrefresher = function (callback, seconds, immediate) { "use strict";
+var Refresher = function (callback, seconds, immediate) { "use strict";
     var self = this,
         cb   = callback,
         freq = seconds || 0,
