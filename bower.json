@@ -1,0 +1,28 @@
+{
+  "name": "refresher.js",
+  "main": "refresher.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/evitolins/refresher.js",
+  "authors": [
+    "Eriks Vitolins <evitolins@gmail.com>"
+  ],
+  "description": "A pure and simple Javascript class to handle repetitive tasks using requestAnimationFrame().",
+  "keywords": [
+    "javascript",
+    "js",
+    "requestAnimationFrame",
+    "raf",
+    "timer",
+    "repeat",
+    "refresh",
+    "cycle"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
