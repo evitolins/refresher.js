@@ -1,8 +1,8 @@
-# refresher
+# refresher.js
 
 <img align="right" height="200" src="http://www.flaticon.com/png/256/2745.png">
 
-Simply repeat a definable callback using requestAnimationFrame().
+A pure and simple Javascript class to handle repeatitive tasks using requestAnimationFrame().
 
 This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  For those who might need it, there are plenty of helpful methods provided to allow for more advanced control.  I imagine it has potential for gaming clocks, data polling, and any other repeatitive task your JS brains can come up with.  Have fun!
 
