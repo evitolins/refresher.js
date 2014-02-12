@@ -1,21 +1,36 @@
-refresher.js
-=============
+# refresher
+
+<img align="right" height="200" src="http://www.flaticon.com/png/256/2745.png">
 
 Simply repeat a definable callback using requestAnimationFrame().
 
+This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  There are plenty of options to allow for more advanced control, if needed.  I imagine it has potential for gaming clocks, data polling, and any other repeatitive task your JS brains can come up with.  Have fun!
+
+## Installation
+**Basic**
+: Simply download and source the file `refresher.js`.
+
+    <script src="/js/refresher.js"></script>
+
+**Bower**
+: To maintain dependency, you may want to use Bower instead
+
+    bower install git://github.com/evitolins/refresher.js
+    
 
 ## Getting started
 The quickest way to use Refresher is to define it's callback and settings when instantiating the object
 
-       // Refresh and run callback every 5 seconds, starting in 5 seconds.
-       var refreshA = new Refresher( function () {console.log("a");}, 5);
+    // Refresh and run callback every 5 seconds, starting in 5 seconds.
+    var refreshA = new Refresher( function () {console.log("a");}, 5);
 
 You can also add or edit your options at any time after instantiation
 
-       // Refresh and run callback every 20 seconds, starting immediately.
-       var refreshB = new Refresher();
-       refreshB.setCallback(function () {console.log("b");});
-       refreshB.setFreq(20);
+    // Refresh and run callback every 20 seconds, starting immediately.
+    var refreshB = new Refresher();
+    refreshB.setCallback(function () {console.log("b");});
+    refreshB.setFreq(20);
+
 
 ## Options
 **getTotal**
