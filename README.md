@@ -2,9 +2,9 @@
 
 <img align="right" height="200" src="http://www.flaticon.com/png/256/2745.png">
 
-A pure and simple Javascript class to handle repeatitive tasks using requestAnimationFrame().
+A pure and simple Javascript class to handle repetitive tasks using requestAnimationFrame().
 
-This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  For those who might need it, there are plenty of helpful methods provided to allow for more advanced control.  I imagine it has potential for gaming clocks, data polling, and any other repeatitive task your JS brains can come up with.  Have fun!
+This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  For those who might need it, there are plenty of helpful methods provided to allow for more advanced control.  I imagine it has potential for gaming clocks, data polling, and any other repetitive task your JS brains can come up with.  Have fun!
 
 ## Installation
 **Basic**
@@ -35,7 +35,7 @@ You can also add or edit your options at any time after instantiation
 ## Advanced
 
 ### Instantly Apply Callback
-In some cases you might need to instantly run your callback during instantiation. If so, just set the 3rd arguement as `true`.
+In some cases you might need to instantly run your callback during instantiation. If so, just set the 3rd argument as `true`.
 
     // Run callback immediately, and then repeat once per minute.
     var refreshA = new Refresher( function () {console.log("See you again in 60 seconds.");}, 60 , true);
@@ -47,7 +47,7 @@ In some cases you might need to instantly run your callback during instantiation
 : Returns total repeats since last reset
 
 **getFreq**
-: Returns current repeat frequecy
+: Returns current repeat frequency
 
 **setFreq**
 : Sets current repeat frequency (in seconds)
@@ -75,10 +75,10 @@ In some cases you might need to instantly run your callback during instantiation
 
        
 ## Why Refresher?
-`requestAnimationFrame()` provides a few perks that the ol' `setInterval()` lacks.  Supporeed browsers use `rAF` more efficently to issue synced with the browser's redraw time. This should be encouraged, since it could  potentially
-reduce unnessessary network activity and processor/battery usage.
+`requestAnimationFrame()` provides a few perks that the ol' `setInterval()` lacks.  Supported browsers use `rAF` more efficiently to issue synced with the browser's redraw time. This should be encouraged, since it could  potentially
+reduce unnecessary network activity and processor/battery usage.
 
-Another great feature is that `rAF` commands will not issue when a browser window or tab is not active.  This means your repeatitive tasks are quickly muted until that window regains focus. Other than that, it's compact, easy to use and has all the options you need.
+Another great feature is that `rAF` commands will not issue when a browser window or tab is not active.  This means your repetitive tasks are quickly muted until that window regains focus. Other than that, it's compact, easy to use and has all the options you need.
 
 
 ## More info on requestAnimationFrame()
