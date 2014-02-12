@@ -12,10 +12,10 @@
    _Example_
 
        // Refresh and run callback every 5 seconds, starting in 5 seconds.
-       var refreshA = new RGBrefresher( function () {console.log("a");}, 5);
+       var refreshA = new Refresher( function () {console.log("a");}, 5);
 
        // Refresh and run callback every 20 seconds, starting immediately.
-       var refreshB = new RGBrefresher( function () {console.log("b");}, 20, true);
+       var refreshB = new Refresher( function () {console.log("b");}, 20, true);
 
   */
 /*jslint
