@@ -75,7 +75,10 @@ In some cases you might need to instantly run your callback during instantiation
 
        
 ## Why Refresher?
-`requestAnimationFrame()` provides a few perks that the ol' `setInterval()` lacks.  A browser treats "RAF" more efficently and issues at the browser's redraw time.  Another great feature is that `rAF` commands will not issue when a browser window or tab is not active.  This means your repeatitive tasks are quickly muted until that window regains focus. Other than that, it's compact, easy to use and has all the options you need.
+`requestAnimationFrame()` provides a few perks that the ol' `setInterval()` lacks.  Supporeed browsers use `rAF` more efficently to issue synced with the browser's redraw time. This should be encouraged, since it could  potentially
+reduce unnessessary network activity and processor/battery usage.
+
+Another great feature is that `rAF` commands will not issue when a browser window or tab is not active.  This means your repeatitive tasks are quickly muted until that window regains focus. Other than that, it's compact, easy to use and has all the options you need.
 
 
 ## More info on requestAnimationFrame()
