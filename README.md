@@ -10,7 +10,7 @@ This simple object has proven useful several times in the past, so I thought I'd
 **Basic**
 : Simply download and source the file `refresher.js`.
 
-```javascript
+```html
 <script src="/js/refresher.js"></script>
 ```
 
@@ -23,11 +23,13 @@ bower install git://github.com/evitolins/refresher.js
 
 ## Getting started
 The quickest way to use Refresher is to define it's callback and settings when instantiating the object
+
 ```javascript
 // Refresh and run callback every 5 seconds, starting in 5 seconds.
 var callbackA = function () {console.log("You repeat me!");};
 var refreshA = new Refresher(callbackA, 5);
 ```
+
 You can also add or edit your options at any time after instantiation
 
 ```javascript
