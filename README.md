@@ -6,6 +6,7 @@ A pure and simple Javascript utility to handle repetitive tasks using requestAni
 
 This simple object has proven useful several times in the past, so I thought I'd share it with the world.   Please read below to get you started on repeating everything you can think of.  For those who might need it, there are plenty of helpful methods provided to allow for more advanced control.  I imagine it has potential for gaming clocks, data polling, and any other repetitive task your JS brains can come up with.  Have fun!
 
+
 ## Installation
 **Basic**
 : Simply download and source the file `refresher.js`.
@@ -22,6 +23,9 @@ bower install git://github.com/evitolins/refresher.js
 ```   
 
 ## Getting started
+
+> Live demo: http://jsbin.com/fofan/3/edit
+
 The quickest way to use Refresher is to define it's callback and settings when instantiating the object
 
 ```javascript
