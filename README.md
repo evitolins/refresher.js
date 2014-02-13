@@ -10,36 +10,44 @@ This simple object has proven useful several times in the past, so I thought I'd
 **Basic**
 : Simply download and source the file `refresher.js`.
 
-    <script src="/js/refresher.js"></script>
+```javascript
+<script src="/js/refresher.js"></script>
+```
 
 **Bower**
 : To maintain dependency, you may want to use Bower instead
 
-    bower install git://github.com/evitolins/refresher.js
-    
+```bash
+bower install git://github.com/evitolins/refresher.js
+```   
 
 ## Getting started
 The quickest way to use Refresher is to define it's callback and settings when instantiating the object
-
-    // Refresh and run callback every 5 seconds, starting in 5 seconds.
-    var refreshA = new Refresher( function () {console.log("You repeat me!");}, 5);
-
+```javascript
+// Refresh and run callback every 5 seconds, starting in 5 seconds.
+var callbackA = function () {console.log("You repeat me!");};
+var refreshA = new Refresher(callbackA, 5);
+```
 You can also add or edit your options at any time after instantiation
 
-    // Refresh and run callback every 20 seconds, starting immediately.
-    var refreshB = new Refresher();
-    refreshB.setCallback(function () {console.log("Has it been 20 seconds already?");});
-    refreshB.setFreq(20);
-
+```javascript
+// Refresh and run callback every 20 seconds, starting in 20 seconds.
+var callbackB = function () {console.log("Has it been 20 seconds already?");};
+var refreshB = new Refresher();
+refreshB.setCallback(callbackB);
+refreshB.setFreq(20);
+```
 
 ## Advanced
 
 ### Instantly Apply Callback
 In some cases you might need to instantly run your callback during instantiation. If so, just set the 3rd argument as `true`.
 
-    // Run callback immediately, and then repeat once per minute.
-    var refreshA = new Refresher( function () {console.log("See you again in 60 seconds.");}, 60 , true);
-
+```javascript
+// Run callback immediately, and then repeat once per minute.
+var callbackC = function () {console.log("See you again in 60 seconds.");};
+var refreshC = new Refresher(callbackC, 60 , true);
+```
 
 
 ## Methods
