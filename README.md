@@ -19,7 +19,7 @@ This simple object has proven useful several times in the past, so I thought I'd
 : To maintain dependency, you may want to use Bower instead
 
 ```bash
-bower install git://github.com/evitolins/refresher.js
+bower install refresher.js
 ```   
 
 ## Getting started
