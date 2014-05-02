@@ -31,7 +31,8 @@ The quickest way to use Refresher is to define it's callback and settings when i
 ```javascript
 // Refresh and run callback every 5 seconds, starting in 5 seconds.
 var callbackA = function () {console.log("You repeat me!");};
-var refreshA = new Refresher(callbackA, 5);
+var refreshA = new Refresher(callbackA, 5000);
+refreshA.start();
 ```
 
 You can also add or edit your options at any time after instantiation
@@ -41,7 +42,8 @@ You can also add or edit your options at any time after instantiation
 var callbackB = function () {console.log("Has it been 20 seconds already?");};
 var refreshB = new Refresher();
 refreshB.setCallback(callbackB);
-refreshB.setFreq(20);
+refreshB.setFreq(20000);
+refreshB.start();
 ```
 
 ## Advanced
@@ -52,7 +54,8 @@ In some cases you might need to instantly run your callback during instantiation
 ```javascript
 // Run callback immediately, and then repeat once per minute.
 var callbackC = function () {console.log("See you again in 60 seconds.");};
-var refreshC = new Refresher(callbackC, 60 , true);
+var refreshC = new Refresher(callbackC, 60000 , true);
+refreshC.start();
 ```
 
 
@@ -64,7 +67,7 @@ var refreshC = new Refresher(callbackC, 60 , true);
 : Returns current repeat frequency
 
 **setFreq**
-: Sets current repeat frequency (in seconds)
+: Sets current repeat frequency (in milliseconds)
 
 **getCallback**
 : Returns callback function, if defined.
