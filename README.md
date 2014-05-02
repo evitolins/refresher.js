@@ -24,7 +24,7 @@ bower install refresher.js
 
 ## Getting started
 
-> Live demo: http://jsbin.com/fofan/3/edit
+> Live demo: http://jsbin.com/fofan/6/edit?js,console,output
 
 The quickest way to use Refresher is to define it's callback and settings when instantiating the object
 
