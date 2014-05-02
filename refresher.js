@@ -80,7 +80,6 @@ var Refresher = function (callback, ms, immediate) { "use strict";
 
     // Init
     reset();
-    start();
 
                                                             
     // API
