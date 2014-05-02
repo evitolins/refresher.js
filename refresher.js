@@ -36,13 +36,13 @@ browser: true, devel: true, plusplus: true, unparam: true, todo: true, vars: tru
 /**
  * Class providing a simple callback w/ refresh using requestAnimationFrame().
  * @param {Function}  callback  Executes at each refresh interval
- * @param {Number}    seconds   Time between each refresh
+ * @param {Number}    milliseconds   Time between each refresh
  * @param {Boolean}   immediate Forces to execute refresh immediately upon init.
  */
-var Refresher = function (callback, seconds, immediate) { "use strict";
+var Refresher = function (callback, ms, immediate) { "use strict";
     var self = this,
         cb   = callback,
-        freq = seconds || 0,
+        freq = ms || 0,
         im   = immediate || false,
         first, prev, total, refreshing, mute,
 
@@ -57,7 +57,7 @@ var Refresher = function (callback, seconds, immediate) { "use strict";
                 requestAnimationFrame(step);
             }
             if (first === 0) { first = timestamp; }
-            if (elapsed >= freq * 1000) {
+            if (elapsed >= freq) {
                 prev = timestamp;
                 total++;
                 runCallback();
@@ -87,7 +87,7 @@ var Refresher = function (callback, seconds, immediate) { "use strict";
     return {
       getTotal    : function () { return total; },
       getFreq     : function () { return freq; },
-      setFreq     : function (seconds) { freq = seconds; },
+      setFreq     : function (ms) { freq = ms; },
       getCallback : function () { return cb; },
       setCallback : function (func) { cb = func; },
       mute        : function () { mute = true; },
