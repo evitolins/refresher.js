@@ -97,3 +97,8 @@ var Refresher = function (callback, ms, immediate) { "use strict";
     };
 
 };
+
+// Adds RequireJS support
+define(function () {
+    return Refresher;
+});
