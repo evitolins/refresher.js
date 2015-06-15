@@ -98,7 +98,9 @@ var Refresher = function (callback, ms, immediate) { "use strict";
 
 };
 
-// Adds RequireJS support
-define(function () {
+// RequireJS Support Shim
+if (typeof define === 'function' && define.amd) {
+  define(function() {
     return Refresher;
-});
+  });
+}
