@@ -52,11 +52,14 @@ var Refresher = function (callback, ms, immediate) { "use strict";
             }
         },
         step = function (timestamp) {
+            if (first === 0) {
+              first = timestamp;
+              prev = timestamp;
+            }
             var elapsed = timestamp - prev;
             if (refreshing) {
                 requestAnimationFrame(step);
             }
-            if (first === 0) { first = timestamp; }
             if (elapsed >= freq) {
                 prev = timestamp;
                 total++;
